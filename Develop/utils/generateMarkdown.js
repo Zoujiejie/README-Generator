@@ -1,7 +1,14 @@
 // TODO: Create a function that returns a license badge based on which license is passed in
 // If there is no license, return an empty string
-function renderLicenseBadge(license) {
-  if (license === "GNU AGPLv3") {
+
+// TODO: Create a function that returns the license link
+// // If there is no license, return an empty string
+// function renderLicenseLink(license) { }
+function renderLicense(license) {
+  if (license === "") {
+    return "";
+  }
+  else if (license === "GNU AGPLv3") {
     return "[![License: AGPL v3](https://img.shields.io/badge/License-AGPL%20v3-blue.svg)](https://www.gnu.org/licenses/agpl-3.0)";
   } else if (license === "GNU GPLv3") {
     return "[![License: GPL v3](https://img.shields.io/badge/License-GPLv3-blue.svg)](https://www.gnu.org/licenses/gpl-3.0)";
@@ -18,10 +25,6 @@ function renderLicenseBadge(license) {
   }
 }
 
-// TODO: Create a function that returns the license link
-// // If there is no license, return an empty string
-// function renderLicenseLink(license) { }
-
 // // TODO: Create a function that returns the license section of README
 // // If there is no license, return an empty string
 // function renderLicenseSection(license) { }
@@ -31,14 +34,19 @@ function generateMarkdown(data) {
   return `
   # ${data.title}
   ${data.description}
-  ${data.licenseBadge}
+  ![License](https://img.shields.io/badge/license-${license}-brightorange)
 
   ## Table of Contents
-  1. [Installation](#installation)
+  1. [Acceptance Criteria](#acceptance criteria)
+  2. [Installation](#installation)
   2. [Usage](#usage)
   3. [License](#license)
   4. [Contribution](#contribution)
-  5. [Question](#questions)
+  5. [Author](#author)
+  6. [Contact](#contact)
+
+  ## Acceptance Criteria
+  ![Acceptance Criteria](Develop/images/acceptance-criteria)
 
   ## Installation:
   ${data.installation}
@@ -50,10 +58,17 @@ function generateMarkdown(data) {
   License used for this project - ${data.license}
 
   ## Contribution:
-  ${data.contribution}
+  Here are the steps needed if you want to contribute to this application:
+  - Fork the repo
+  - Create a feature branch (git checkout -b branchName)
+  - Commit your new feature (git commit -m 'what you contributed')
+  - Push your branch (git push)
 
-  ## Questions:
-  ${data.questions}
+  ## Author
+  ${data.author}
+
+  ## Contact:
+  ${data.contact}
 `;
 }
 
