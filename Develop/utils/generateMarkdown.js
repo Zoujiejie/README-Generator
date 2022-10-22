@@ -34,10 +34,10 @@ function generateMarkdown(data) {
   return `
   # ${data.title}
   ${data.description}
-  ![License](https://img.shields.io/badge/license-${license}-brightorange)
+  ![badge](https://img.shields.io/badge/license-${data.license}-brightorange)
 
   ## Table of Contents
-  1. [Acceptance Criteria](#acceptance criteria)
+  1. [Acceptance Criteria](#acceptance-criteria)
   2. [Installation](#installation)
   2. [Usage](#usage)
   3. [License](#license)
@@ -46,7 +46,7 @@ function generateMarkdown(data) {
   6. [Contact](#contact)
 
   ## Acceptance Criteria
-  ![Acceptance Criteria](Develop/images/acceptance-criteria)
+  ![acceptance criteria](./images/acceptance-criteria.jpeg)
 
   ## Installation:
   ${data.installation}

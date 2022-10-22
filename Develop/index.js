@@ -23,7 +23,7 @@ const questions = [
     },
     {
         type: "input",
-        message: "What are the instructions to use your project??",
+        message: "What are the instructions to use your project?",
         name: "usage",
     },
     {
@@ -39,11 +39,6 @@ const questions = [
             "Apache",
             "Boost",
         ],
-    },
-    {
-        type: "input",
-        message: "Please explain how other developers or resources might contribute to your project?",
-        name: "contribution",
     },
     {
         type: "input",
